@@ -216,13 +216,13 @@ def data_fit_forecast(df, country_name, fit_fun, start_year, end_year):
     plt.plot(year_range, forecast, label="Forecast", color='k')
     plt.fill_between(year_range, low, up, color="yellow", alpha=0.7,
                      label='Confidence Margin')
-
+    
+    # Define the plot title
+    plt.title(f"Electric power consumption forecast for {country_name}")
+    
     # Axes labelling
     plt.xlabel("Year")
     plt.ylabel("Electric power consumption (kWh per capita)")
-
-    # Define the plot title
-    plt.title(f"Electric power consumption forecast for {country_name}")
 
     # Display the legend
     plt.legend()
